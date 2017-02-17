@@ -54,6 +54,12 @@ article3 = Article("창업", "창업은 쉬워요")
 class BrunchArticle(Article):
     source = "브런치"
 
+    def read(self):
+        self.view_count = self.view_count + 2
+
 brunch_article = BrunchArticle("개발", "개발은 쉬워요")
 print(brunch_article.title)
 print(brunch_article.source)
+print(brunch_article.view_count)
+brunch_article.read()
+print(brunch_article.view_count)
